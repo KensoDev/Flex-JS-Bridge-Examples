@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">	
+    <head>
+        <title></title>
+        <meta name="google" value="notranslate">         
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script type="text/javascript" src="swfobject.js"></script>
+		<script type="text/javascript">
+			function embedSWF()
+			{
+				var flashvars = {
+					name: 'Avi Tzurel',
+					license: '12345'
+				};
+				
+				var params = {};
+				
+				var attributes = {
+					id: 'myFlashObject',
+					name: 'myFlashObjectName'
+				};
+				
+				
+				swfobject.embedSWF('html_wrappers.swf', 'flashContent', '800', '600', '10.0.0', 'playerProductInstall.swf', flashvars, params, attributes);
+			}
+			
+			
+			function showName(firstname, lastname)
+			{
+				alert(firstname+','+lastname);
+			}
+			
+			function showNameInFlash()
+			{
+				var flash = swfobject.getObjectById('myFlashObject');
+				if(flash)
+				{
+					flash.showMyName('Avi', 'Tzurel');
+				}
+			}
+			
+		</script>
+    </head>
+    <body>
+        <div id="flashContent">
+        	<p>
+	        	To view this page ensure that Adobe Flash Player version 
+				10.0.0 or greater is installed. 
+			</p>
+        </div>	
+		<script type="text/javascript">
+			embedSWF();
+		</script>
+		<input type="button" label="show name" onclick="showNameInFlash()">
+   </body>
+</html>
