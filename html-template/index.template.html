@@ -42,15 +42,19 @@
 		</script>
     </head>
     <body>
-        <div id="flashContent">
-        	<p>
-	        	To view this page ensure that Adobe Flash Player version 
-				${version_major}.${version_minor}.${version_revision} or greater is installed. 
-			</p>
-        </div>	
+		<div id="mainContainer">
+	        <div id="flashContent">
+	        	<p>
+		        	To view this page ensure that Adobe Flash Player version 
+					${version_major}.${version_minor}.${version_revision} or greater is installed. 
+				</p>
+	        </div>			
+		</div>
+		<div id="buttons">
+			<input type="button" value="Show name" onclick="showNameInFlash()">			
+		</div>
 		<script type="text/javascript">
 			embedSWF();
 		</script>
-		<input type="button" label="show name" onclick="showNameInFlash()">
    </body>
 </html>
